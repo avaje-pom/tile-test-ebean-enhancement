@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+
+  <properties>
+    <ebeanorm-enhancement.plugin.args>debug=0</ebeanorm-enhancement.plugin.args>
+    <avaje-ebeanorm-mavenenhancer.version>4.9.1</avaje-ebeanorm-mavenenhancer.version>
+    <avaje-ebeanorm-mavenenhancer.target-test-classes>target/test-classes</avaje-ebeanorm-mavenenhancer.target-test-classes>
+  </properties>
+
+  <build>
+    <plugins>
+
+      <plugin>
+        <groupId>org.avaje.ebeanorm</groupId>
+        <artifactId>avaje-ebeanorm-mavenenhancer</artifactId>
+        <version>${avaje-ebeanorm-mavenenhancer.version}</version>
+        <executions>
+          <execution>
+            <id>test</id>
+            <phase>process-test-classes</phase>
+            <configuration>
+              <classSource>${avaje-ebeanorm-mavenenhancer.target-test-classes}</classSource>
+              <transformArgs>${ebeanorm-enhancement.plugin.args}</transformArgs>
+            </configuration>
+            <goals>
+              <goal>enhance</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+</project>
