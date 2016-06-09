@@ -4,7 +4,7 @@
 
   <groupId>org.avaje.tile</groupId>
   <artifactId>test-ebean-enhancement</artifactId>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.3-SNAPSHOT</version>
   <packaging>tile</packaging>
 
   <parent>
